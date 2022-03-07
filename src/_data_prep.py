@@ -101,11 +101,11 @@ class data_preparation:
         self.makeTimeFeatures()
         print('Made time features')
         print('The size of the final csv is {}'.format(self.df_combined.shape))
-        self.df_combined.to_csv('data/combined_data.csv', index=False)
+        self.df_combined.to_csv('../sample_data/data.csv', index=False)
         print('Saved combined data')        
 
 if __name__ == '__main__':
-    files_path = './cabspottingdata/'
+    files_path = '../sample_data/'
     data_prep = data_preparation(files_path)
     data_prep.createSaveData()
 

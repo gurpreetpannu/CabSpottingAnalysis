@@ -112,7 +112,7 @@ class importantCabs:
         
         
 if __name__ == '__main__':
-    taxidata = prepareTaxiData('data/combined_data.csv')
+    taxidata = prepareTaxiData('../sample_data/data.csv')
     df = taxidata.getFinalDf()
     
     cabsOfInterest = importantCabs(df)

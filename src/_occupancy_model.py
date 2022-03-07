@@ -125,7 +125,7 @@ class model:
 
 if __name__ == '__main__':    
     # Creaing the training and testing dataset
-    prepare_data = prepareData('data/combined_data.csv')
+    prepare_data = prepareData('../sample_data/data.csv')
     X_train, X_test, y_train, y_test = prepare_data.createTestTrainSplit()
     
     # Defining the models

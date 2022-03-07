@@ -183,7 +183,7 @@ class evalHelper:
     plt.xlabel('epoch')
     plt.legend(['train', 'val'], loc='upper left')
     plt.show()
-    plt.savefig('images/LossPlot.png')
+    plt.savefig('../images/LossPlot.png')
     
   def evaluationMetrics(self) -> dict:
     ''' This function will evaluate the models and return the mean absolute
@@ -260,7 +260,7 @@ class evalHelper:
       plt.ylabel('Latitude')
       plt.xlabel('Longitude')
       
-      plt.savefig('images/ScatterPlotResults.png')
+      plt.savefig('../images/ScatterPlotResults.png')
       plt.tight_layout()
 
 Y_test = []
@@ -269,7 +269,7 @@ GBR_model_pred = []
 XGB_model_pred = []
 eval_results = []
 hist_dl = []
-outlier = outlierPlotScatter('/data/combined_data.csv')
+outlier = outlierPlotScatter('../data/data.csv')
 df_out = outlier.removeOutliers()
 mms = MinMaxScaler()
 df_out[['normalized_lat', 'normalized_lon']] = mms.fit_transform(

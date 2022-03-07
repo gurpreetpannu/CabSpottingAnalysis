@@ -62,7 +62,7 @@ class plotter:
         my_circle=plt.Circle( (0,0), 0.75, color='white')
         p=plt.gcf()
         p.gca().add_artist(my_circle)
-        plt.savefig('./images/occupancy_rate.png')
+        plt.savefig('../images/occupancy_rate.png')
         
     def plotDistanceWeekdayChart(self) -> None:
         ''' This creates a bar chart showing the distance travelled by cabs 
@@ -84,7 +84,7 @@ class plotter:
         ax.grid(False)
         ax.legend(occupancy_dict.values(), loc='upper center', 
                 bbox_to_anchor=(0.5, 1.1))
-        plt.savefig('./images/distance_travelled_by_occupancy.png')
+        plt.savefig('../images/distance_travelled_by_occupancy.png')
             
     def plotDistanceHourChart(self) -> None:
         ''' This function creates plot of the proportion of occupancy in the
@@ -101,7 +101,7 @@ class plotter:
                     color = ['darksalmon', 'mediumseagreen'])
         ax.grid(False)
         ax.legend(loc='upper center', bbox_to_anchor=(0.5, 1.1))
-        plt.savefig('./images/occupancy_by_hour.png')
+        plt.savefig('../images/occupancy_by_hour.png')
         
     def savePlots(self) -> None:
         ''' This function will save all the plots created.
@@ -112,7 +112,7 @@ class plotter:
         print('COmpleted all plots! Exiting...')
         
 if __name__ == '__main__':
-    csv_path = 'data/combined_data.csv'
+    csv_path = '../sample_data/data.csv'
     print('Reading in the data...')
     robust = robustnessData(csv_path)
     robust.save(csv_path)

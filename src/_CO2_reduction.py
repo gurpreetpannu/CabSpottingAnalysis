@@ -52,9 +52,11 @@ class CO2Reduction:
         plt.ylabel('CO2 Emission Saved (tonnes)')
         plt.title('Additional CO2 Emission Saved by Cabs Switching to Electric')
         plt.legend(loc='upper right')
-        plt.savefig('images/co2_saved.png')        
+        plt.savefig('../images/co2_saved.png')     
+        
+           
 if __name__ == '__main__':
-    path = 'data/combined_data.csv'
+    path = '../sample_data/data.csv'
     co2_reduction = CO2Reduction(path)
     print('Reading in the data and calculating clean km per month')
     clean_km_per_month, total_vkm = co2_reduction.extrapolateCleanKm()
